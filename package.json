@@ -1,0 +1,22 @@
+{
+  "name": "btt-screenshot-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.43.1",
+    "puppeteer": "^22.7.1",
+    "sharp": "^0.33.3"
+  }
+}
