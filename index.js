@@ -79,6 +79,7 @@ async function screenShot() {
     await sharp("./images/mindrustURL.png")
     .extract({ left: 298, top: 223, width: 300, height: 95 })
     .toFile("./images/editedimages/mindrustURL.png")
+    
     await sharp("./images/Kavelj22URL.png")
     .extract({ left: 298, top: 223, width: 300, height: 95 })
     .toFile("./images/editedimages/Kavelj22URL.png")
