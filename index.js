@@ -26,7 +26,7 @@ const BaofengURL = "https://bitcointalk.org/index.php?action=profile;u=984384"
 
 
 async function screenShot() {
-    const browser = await puppeteer.launch(); // {headless: false} inside launch if you want to see // {args: ["--force-device-scale-factor=1.3"]}
+    const browser = await puppeteer.launch(); 
     const page = await browser.newPage();
     await page.setViewport({
       width: 1920,
