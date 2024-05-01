@@ -117,7 +117,7 @@ async function screenShot() {
 
 
     await sharp("./images/mindrustURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/mindrustURL.png")
 
     await sharp("./images/Kavelj22URL.png")
@@ -125,11 +125,11 @@ async function screenShot() {
     .toFile("./images/editedimages/Kavelj22URL.png")
   
     await sharp("./images/PeanutswarURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/PeanutswarURL.png")
   
     await sharp("./images/dansus021URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 390, height: 195 })
     .toFile("./images/editedimages/dansus021URL.png")
   
     await sharp("./images/gagux123URL.png")
@@ -157,7 +157,7 @@ async function screenShot() {
     .toFile("./images/editedimages/Nalain420URL.png")
 
     await sharp("./images/r_victoryURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/r_victoryURL.png")
 
     await sharp("./images/DYING_S0ULURL.png")
@@ -165,19 +165,19 @@ async function screenShot() {
     .toFile("./images/editedimages/DYING_S0ULURL.png")
 
     await sharp("./images/cyganURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/cyganURL.png")
 
     await sharp("./images/GazetaBitcoinURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/GazetaBitcoinURL.png")
 
     await sharp("./images/zasadURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/zasadURL.png")
 
     await sharp("./images/Husna_QAURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/Husna_QAURL.png")
 
     await sharp("./images/Ale88URL.png")
@@ -189,15 +189,15 @@ async function screenShot() {
     .toFile("./images/editedimages/paid2URL.png")
 
     await sharp("./images/PorfiriiURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/PorfiriiURL.png")
 
     await sharp("./images/DrBeerURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/DrBeerURL.png")
 
     await sharp("./images/BaofengURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile("./images/editedimages/BaofengURL.png")
 
   
