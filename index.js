@@ -42,8 +42,6 @@ async function screenShot() {
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: './images/Kavelj22URL.png'});
 
-    /*
-
     await page.goto(PeanutswarURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: './images/PeanutswarURL.png'});
@@ -115,8 +113,6 @@ async function screenShot() {
     await page.goto(BaofengURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: './images/BaofengURL.png'});
-
-    */
 
     await browser.close();
 
@@ -309,7 +305,7 @@ async function screenShot() {
     ])
     .toFile('./images/editedimages/finalimage/Ale88URL_end.png');
 
-    
+
 
     // paid 17
 
