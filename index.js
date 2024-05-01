@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const puppeteer = require('puppeteer');
 const sharp = require('sharp');
+const joinImages = require ('join-images');
 
 const mindrustURL = "https://bitcointalk.org/index.php?action=profile;u=176777"
 const Kavelj22URL = "https://bitcointalk.org/index.php?action=profile;u=2443746"
@@ -39,7 +40,9 @@ async function screenShot() {
 
     await page.goto(Kavelj22URL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
-    await page.screenshot({path: './images/Kavelj22URL.png'}); 
+    await page.screenshot({path: './images/Kavelj22URL.png'});
+
+    /*
 
     await page.goto(PeanutswarURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
@@ -113,94 +116,236 @@ async function screenShot() {
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: './images/BaofengURL.png'});
 
+    */
+
     await browser.close();
 
-
+    // mind 1
     await sharp("./images/mindrustURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/mindrustURL.png")
+    .toFile("./images/editedimages/finalimage/mindrustURL.png")
+
+    // kavel 2 
 
     await sharp("./images/Kavelj22URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/Kavelj22URL.png")
-  
+    .extract({ left: 350, top: 446, width: 170, height: 195 })
+    .toFile("./images/editedimages/Kavelj22URL_1.png")
+
+    await sharp("./images/Kavelj22URL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Kavelj22URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/Kavelj22URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/Kavelj22URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/Kavelj22URL_end.png');
+
+    // peanuts 3
+
     await sharp("./images/PeanutswarURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/PeanutswarURL.png")
+    .toFile("./images/editedimages/finalimage/PeanutswarURL.png")
+
+    // dans 4
   
     await sharp("./images/dansus021URL.png")
     .extract({ left: 350, top: 446, width: 390, height: 195 })
-    .toFile("./images/editedimages/dansus021URL.png")
+    .toFile("./images/editedimages/finalimage/dansus021URL.png")
+
+    // gagux 5
   
     await sharp("./images/gagux123URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/gagux123URL.png")
-
-    await sharp("./images/Learn_BitcoinURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/Learn_BitcoinURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/gagux123URL_1.png")
 
     await sharp("./images/gagux123URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/gagux123URL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/gagux123URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/gagux123URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/gagux123URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/gagux123URL_end.png');
+
+    // learn 6
+
+    await sharp("./images/Learn_BitcoinURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Learn_BitcoinURL_1.png")
+
+    await sharp("./images/Learn_BitcoinURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Learn_BitcoinURL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/Learn_BitcoinURL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/Learn_BitcoinURL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/Learn_BitcoinURL_end.png');
+
+    // hatch 7
 
     await sharp("./images/HatchyURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/HatchyURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/HatchyURL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/HatchyURL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/HatchyURL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/HatchyURL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/HatchyURL_end.png');
+
+    // chil 8
 
     await sharp("./images/ChilwellURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/ChilwellURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/ChilwellURL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/ChilwellURL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/ChilwellURL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/ChilwellURL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/ChilwellURL_end.png');
+
+    // nala 9
 
     await sharp("./images/Nalain420URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/Nalain420URL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Nalain420URL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Nalain420URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/Nalain420URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/Nalain420URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/Nalain420URL_end.png');
+
+    
+
+    // vic 10
 
     await sharp("./images/r_victoryURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/r_victoryURL.png")
+    .toFile("./images/editedimages/finalimage/r_victoryURL.png")
+
+    // dying 11
 
     await sharp("./images/DYING_S0ULURL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/DYING_S0ULURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/DYING_S0ULURL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/DYING_S0ULURL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/DYING_S0ULURL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/DYING_S0ULURL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/DYING_S0ULURL_end.png');
+
+    
+
+    // cyg 12
 
     await sharp("./images/cyganURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/cyganURL.png")
+    .toFile("./images/editedimages/finalimage/cyganURL.png")
+
+    // gazet 13
 
     await sharp("./images/GazetaBitcoinURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/GazetaBitcoinURL.png")
+    .toFile("./images/editedimages/finalimage/GazetaBitcoinURL.png")
+
+    // zasa 14
 
     await sharp("./images/zasadURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/zasadURL.png")
+    .toFile("./images/editedimages/finalimage/zasadURL.png")
+
+    
+
+    // hus 15
 
     await sharp("./images/Husna_QAURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/Husna_QAURL.png")
+    .toFile("./images/editedimages/finalimage/Husna_QAURL.png")
+
+    // ale 16
 
     await sharp("./images/Ale88URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/Ale88URL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Ale88URL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/Ale88URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/Ale88URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/Ale88URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/Ale88URL_end.png');
+
+
+    // paid 17
 
     await sharp("./images/paid2URL.png")
-    .extract({ left: 350, top: 446, width: 650, height: 195 })
-    .toFile("./images/editedimages/paid2URL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/paid2URL_1.png")
+
+    await sharp("./images/HatchyURL.png")
+    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .toFile("./images/editedimages/paid2URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/paid2URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/paid2URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/paid2URL_end.png');
+
+    // port 18
 
     await sharp("./images/PorfiriiURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/PorfiriiURL.png")
+    .toFile("./images/editedimages/finalimage/PorfiriiURL.png")
+
+
+    // drbeer 19
 
     await sharp("./images/DrBeerURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/DrBeerURL.png")
+    .toFile("./images/editedimages/finalimage/DrBeerURL.png")
+
+    // bao 20
 
     await sharp("./images/BaofengURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile("./images/editedimages/BaofengURL.png")
+    .toFile("./images/editedimages/finalimage/BaofengURL.png")
 
-  
 
   }
 screenShot()
