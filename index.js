@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const puppeteer = require('puppeteer');
 const sharp = require('sharp');
-const joinImages = require ('join-images');
 
 const mindrustURL = "https://bitcointalk.org/index.php?action=profile;u=176777"
 const Kavelj22URL = "https://bitcointalk.org/index.php?action=profile;u=2443746"
