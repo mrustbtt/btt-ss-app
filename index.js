@@ -146,8 +146,19 @@ async function screenShot() {
     // dans 4
   
     await sharp("./images/dansus021URL.png")
-    .extract({ left: 350, top: 446, width: 390, height: 195 })
-    .toFile("./images/editedimages/finalimage/dansus021URL.png")
+    .extract({ left: 350, top: 446, width: 120, height: 195 })
+    .toFile("./images/editedimages/dansus021URL_1.png")
+
+    await sharp("./images/dansus021URL.png")
+    .extract({ left: 520, top: 446, width: 250, height: 195 })
+    .toFile("./images/editedimages/dansus021URL_2.png")
+
+    await sharp("./images/editedimages/bkgrnd.png")
+    .composite([
+      { input: "./images/editedimages/dansus021URL_1.png", gravity: 'west' },
+      { input: "./images/editedimages/dansus021URL_2.png", gravity: 'east' }
+    ])
+    .toFile('./images/editedimages/finalimage/dansus021URL_end.png');
 
     // gagux 5
   
