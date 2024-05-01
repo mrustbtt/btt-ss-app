@@ -309,6 +309,7 @@ async function screenShot() {
     ])
     .toFile('./images/editedimages/finalimage/Ale88URL_end.png');
 
+    
 
     // paid 17
 
