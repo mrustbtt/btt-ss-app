@@ -269,7 +269,7 @@ async function screenShot() {
       { input: pathEditedImages + "r_victoryURL_1.png", gravity: 'west' },
       { input: pathEditedImages + "r_victoryURL_2.png", gravity: 'east' }
     ])
-    .toFile(pathEditedImages + "finalimage/r_victoryURL_end.png");
+    .toFile(pathEditedImages + "finalimage/r_victoryURL.png");
 
     // dying 11
 
