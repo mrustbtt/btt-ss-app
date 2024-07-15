@@ -25,6 +25,7 @@ const paid2URL = pathBTT + "3373825"
 const PorfiriiURL = pathBTT + "991374"
 const DrBeerURL = pathBTT + "201654"
 const BaofengURL = pathBTT + "984384"
+const mela65URL = pathBTT + "962182"
 
 const path1 = "./images/"
 const pathEditedImages = "./images/editedimages/"
@@ -118,6 +119,10 @@ async function screenShot() {
     await page.goto(BaofengURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: path1 + 'BaofengURL.png'});
+
+    await page.goto(mela65URL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'mela65URL.png'});
 
     await browser.close();
 
@@ -370,6 +375,11 @@ async function screenShot() {
     await sharp(path1 + "BaofengURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile(pathEditedImages + "finalimage/BaofengURL.png")
+
+    // mela65
+    await sharp(path1 + "mela65URL.png")
+    .extract({ left: 350, top: 446, width: 370, height: 195 })
+    .toFile(pathEditedImages + "finalimage/mela65URL.png")
 
 
   }
