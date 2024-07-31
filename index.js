@@ -26,6 +26,7 @@ const PorfiriiURL = pathBTT + "991374"
 const DrBeerURL = pathBTT + "201654"
 const BaofengURL = pathBTT + "984384"
 const mela65URL = pathBTT + "962182"
+const Adiljutt156URL= pathBTT + "3581000"
 
 const path1 = "./images/"
 const pathEditedImages = "./images/editedimages/"
@@ -123,6 +124,10 @@ async function screenShot() {
     await page.goto(mela65URL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: path1 + 'mela65URL.png'});
+
+    await page.goto(Adiljutt156URL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'Adiljutt156URL.png'});
 
     await browser.close();
 
@@ -381,6 +386,21 @@ async function screenShot() {
     .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile(pathEditedImages + "finalimage/mela65URL.png")
 
+    // Adiljutt156
+    await sharp(path1 + "Adiljutt156URL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "Adiljutt156URL_1.png")
+
+    await sharp(path1 + "Adiljutt156URL.png")
+    .extract({ left: 708, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "Adiljutt156URL_2.png")
+
+    await sharp(pathEditedImages + "bkgrnd.png")
+    .composite([
+      { input: pathEditedImages + "Adiljutt156URL_1.png", gravity: 'west' },
+      { input: pathEditedImages + "Adiljutt156URL_2.png", gravity: 'east' }
+    ])
+    .toFile(pathEditedImages + "finalimage/Adiljutt156URL_end.png");
 
   }
 screenShot()
