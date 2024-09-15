@@ -144,7 +144,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "Kavelj22URL_1.png")
 
     await sharp(path1 + "Kavelj22URL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "Kavelj22URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -184,7 +184,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "gagux123URL_1.png")
 
     await sharp(path1 + "gagux123URL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 690, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "gagux123URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -218,7 +218,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "HatchyURL_1.png")
 
     await sharp(path1 + "HatchyURL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 696, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "HatchyURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -235,7 +235,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "ChilwellURL_1.png")
 
     await sharp(path1 + "ChilwellURL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "ChilwellURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -252,7 +252,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "Nalain420URL_1.png")
 
     await sharp(path1 + "Nalain420URL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "Nalain420URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -333,7 +333,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "Ale88URL_1.png")
 
     await sharp(path1 + "Ale88URL.png")
-    .extract({ left: 715, top: 446, width: 200, height: 195 })
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "Ale88URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -352,7 +352,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "paid2URL_1.png")
 
     await sharp(path1 + "paid2URL.png")
-    .extract({ left: 515, top: 446, width: 200, height: 195 })
+    .extract({ left: 620, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "paid2URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
