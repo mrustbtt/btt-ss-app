@@ -328,6 +328,7 @@ async function screenShot() {
 
     // ale 16
 
+    /*
     await sharp(path1 + "Ale88URL.png")
     .extract({ left: 350, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "Ale88URL_1.png")
@@ -342,7 +343,7 @@ async function screenShot() {
       { input: pathEditedImages + "Ale88URL_2.png", gravity: 'east' }
     ])
     .toFile(pathEditedImages + "finalimage/Ale88URL_end.png");
-
+    */
 
 
     // paid 17
@@ -352,7 +353,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "paid2URL_1.png")
 
     await sharp(path1 + "paid2URL.png")
-    .extract({ left: 620, top: 446, width: 200, height: 195 })
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "paid2URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -376,10 +377,11 @@ async function screenShot() {
     .toFile(pathEditedImages + "finalimage/DrBeerURL.png")
 
     // bao 20
-
+    /*
     await sharp(path1 + "BaofengURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile(pathEditedImages + "finalimage/BaofengURL.png")
+    */
 
     // mela65
     await sharp(path1 + "mela65URL.png")
