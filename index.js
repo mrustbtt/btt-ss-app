@@ -27,6 +27,7 @@ const DrBeerURL = pathBTT + "201654"
 const BaofengURL = pathBTT + "984384"
 const mela65URL = pathBTT + "962182"
 const Adiljutt156URL= pathBTT + "3581000"
+const M47AK16URL= pathBTT + "3658800"
 
 const path1 = "./images/"
 const pathEditedImages = "./images/editedimages/"
@@ -44,6 +45,10 @@ async function screenShot() {
     await page.goto(mindrustURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: path1 + 'mindrustURL.png'}); 
+
+    await page.goto(M47AK16URL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'M47AK16URL.png'}); 
 
     await page.goto(Kavelj22URL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
@@ -387,6 +392,22 @@ async function screenShot() {
     await sharp(path1 + "mela65URL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
     .toFile(pathEditedImages + "finalimage/mela65URL.png")
+
+    // M47AK16
+    await sharp(path1 + "M47AK16URL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "M47AK16URL_1.png")
+
+    await sharp(path1 + "M47AK16URL.png")
+    .extract({ left: 700, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "M47AK16URL_2.png")
+
+    await sharp(pathEditedImages + "bkgrnd.png")
+    .composite([
+      { input: pathEditedImages + "M47AK16URL_1.png", gravity: 'west' },
+      { input: pathEditedImages + "M47AK16URL_2.png", gravity: 'east' }
+    ])
+    .toFile(pathEditedImages + "finalimage/M47AK16URL_END.png");
 
     // Adiljutt156
     await sharp(path1 + "Adiljutt156URL.png")
