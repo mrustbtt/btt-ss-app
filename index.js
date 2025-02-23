@@ -206,7 +206,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "Learn_BitcoinURL_1.png")
 
     await sharp(path1 + "Learn_BitcoinURL.png")
-    .extract({ left: 705, top: 446, width: 240, height: 195 })
+    .extract({ left: 545, top: 446, width: 240, height: 195 })
     .toFile(pathEditedImages + "Learn_BitcoinURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -399,7 +399,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "M47AK16URL_1.png")
 
     await sharp(path1 + "M47AK16URL.png")
-    .extract({ left: 700, top: 446, width: 200, height: 195 })
+    .extract({ left: 540, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "M47AK16URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
