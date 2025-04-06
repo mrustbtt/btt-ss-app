@@ -223,7 +223,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "HatchyURL_1.png")
 
     await sharp(path1 + "HatchyURL.png")
-    .extract({ left: 696, top: 446, width: 200, height: 195 })
+    .extract({ left: 720, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "HatchyURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -257,7 +257,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "Nalain420URL_1.png")
 
     await sharp(path1 + "Nalain420URL.png")
-    .extract({ left: 700, top: 446, width: 200, height: 195 })
+    .extract({ left: 730, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "Nalain420URL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
@@ -293,7 +293,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "DYING_S0ULURL_1.png")
 
     await sharp(path1 + "DYING_S0ULURL.png")
-    .extract({ left: 650, top: 446, width: 250, height: 195 })
+    .extract({ left: 561, top: 446, width: 250, height: 195 })
     .toFile(pathEditedImages + "DYING_S0ULURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
