@@ -28,6 +28,8 @@ const BaofengURL = pathBTT + "984384"
 const mela65URL = pathBTT + "962182"
 const Adiljutt156URL= pathBTT + "3581000"
 const M47AK16URL= pathBTT + "3658800"
+const ZweiURL= pathBTT + "2004043"
+const KhaledURL= pathBTT + "1012655"
 
 const path1 = "./images/"
 const pathEditedImages = "./images/editedimages/"
@@ -133,6 +135,14 @@ async function screenShot() {
     await page.goto(Adiljutt156URL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
     await page.screenshot({path: path1 + 'Adiljutt156URL.png'});
+
+    await page.goto(ZweiURL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'ZweiURL.png'});
+
+    await page.goto(KhaledURL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'KhaledURL.png'});
 
     await browser.close();
 
@@ -424,6 +434,45 @@ async function screenShot() {
       { input: pathEditedImages + "Adiljutt156URL_2.png", gravity: 'east' }
     ])
     .toFile(pathEditedImages + "finalimage/Adiljutt156URL_end.png");
+
+    // zwei
+
+
+    await sharp(path1 + "ZweiURL.png")
+    .extract({ left: 245, top: 446, width: 370, height: 195 })
+    .toFile(pathEditedImages + "finalimage/ZweiURL.png")
+
+    /* await sharp(path1 + "ZweiURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "ZweiURL_1.png")
+
+    await sharp(path1 + "ZweiURL.png")
+    .extract({ left: 708, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "ZweiURL_2.png")
+
+    await sharp(pathEditedImages + "bkgrnd.png")
+    .composite([
+      { input: pathEditedImages + "ZweiURL_1.png", gravity: 'west' },
+      { input: pathEditedImages + "ZweiURL_2.png", gravity: 'east' }
+    ])
+    .toFile(pathEditedImages + "finalimage/ZweiURL_end.png");*/
+
+     // khaled
+       await sharp(path1 + "KhaledURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "KhaledURL_1.png")
+
+    await sharp(path1 + "KhaledURL.png")
+    .extract({ left: 720, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "KhaledURL_2.png")
+
+    await sharp(pathEditedImages + "bkgrnd.png")
+    .composite([
+      { input: pathEditedImages + "KhaledURL_1.png", gravity: 'west' },
+      { input: pathEditedImages + "KhaledURL_2.png", gravity: 'east' }
+    ])
+    .toFile(pathEditedImages + "finalimage/KhaledURL_end.png");
+
 
   }
 screenShot()
