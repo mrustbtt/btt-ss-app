@@ -323,9 +323,24 @@ async function screenShot() {
 
     // gazet 13
 
-    await sharp(path1 + "GazetaBitcoinURL.png")
+    /*await sharp(path1 + "GazetaBitcoinURL.png")
     .extract({ left: 350, top: 446, width: 370, height: 195 })
-    .toFile(pathEditedImages + "finalimage/GazetaBitcoinURL.png")
+    .toFile(pathEditedImages + "finalimage/GazetaBitcoinURL.png")*/
+
+    await sharp(path1 + "GazetaBitcoinURL.png")
+    .extract({ left: 350, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "GazetaBitcoinURL_1.png")
+
+    await sharp(path1 + "GazetaBitcoinURL.png")
+    .extract({ left: 611, top: 446, width: 200, height: 195 })
+    .toFile(pathEditedImages + "GazetaBitcoinURL_2.png")
+
+    await sharp(pathEditedImages + "bkgrnd.png")
+    .composite([
+      { input: pathEditedImages + "GazetaBitcoinURL_1.png", gravity: 'west' },
+      { input: pathEditedImages + "GazetaBitcoinURL_2.png", gravity: 'east' }
+    ])
+    .toFile(pathEditedImages + "finalimage/GazetaBitcoinURL.png");
 
     // zasa 14
 
