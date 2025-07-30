@@ -30,6 +30,7 @@ const Adiljutt156URL= pathBTT + "3581000"
 const M47AK16URL= pathBTT + "3658800"
 const ZweiURL= pathBTT + "2004043"
 const KhaledURL= pathBTT + "1012655"
+const katanic97URL= pathBTT + "1856852"
 
 const path1 = "./images/"
 const pathEditedImages = "./images/editedimages/"
@@ -46,7 +47,11 @@ async function screenShot() {
     });
     await page.goto(mindrustURL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
-    await page.screenshot({path: path1 + 'mindrustURL.png'}); 
+    await page.screenshot({path: path1 + 'mindrustURL.png'});
+
+    await page.goto(katanic97URL);
+    await page.evaluate(() => document.body.style.zoom = 2.0  );
+    await page.screenshot({path: path1 + 'katanic97URL.png'});
 
     await page.goto(M47AK16URL);
     await page.evaluate(() => document.body.style.zoom = 2.0  );
@@ -487,6 +492,12 @@ async function screenShot() {
       { input: pathEditedImages + "KhaledURL_2.png", gravity: 'east' }
     ])
     .toFile(pathEditedImages + "finalimage/KhaledURL_end.png");
+
+     // katanic97
+
+     await sharp(path1 + "katanic97URL.png")
+     .extract({ left: 354, top: 446, width: 370, height: 195 })
+     .toFile(pathEditedImages + "finalimage/katanic97URL.png")
 
 
   }
