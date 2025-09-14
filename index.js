@@ -483,7 +483,7 @@ async function screenShot() {
     .toFile(pathEditedImages + "KhaledURL_1.png")
 
     await sharp(path1 + "KhaledURL.png")
-    .extract({ left: 720, top: 446, width: 200, height: 195 })
+    .extract({ left: 698, top: 446, width: 200, height: 195 })
     .toFile(pathEditedImages + "KhaledURL_2.png")
 
     await sharp(pathEditedImages + "bkgrnd.png")
